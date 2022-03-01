@@ -1,0 +1,25 @@
+{
+  "name": "team-poster",
+  "version": "1.0.0",
+  "description": "Javascript utility to document a team.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frye/team-poster.git"
+  },
+  "author": "frye",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frye/team-poster/issues"
+  },
+  "homepage": "https://github.com/frye/team-poster#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}

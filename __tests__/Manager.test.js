@@ -2,7 +2,7 @@ const Manager = require('../lib/Manager');
 const testName = 'Tess Tester';
 const testId = 12354;
 const testEmail = 'tess@test.com';
-const testOfficeNumber = D126;
+const testOfficeNumber = 'D126';
 
 describe('Manager', () => {
 	describe('Initialization', () => {

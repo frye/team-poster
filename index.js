@@ -105,12 +105,10 @@ const createMembers = () => {
 		}
 	])
 	.then((answers) => {
-		console.log(answers);
 		const addMore = answers.addMore;
 		if (answers.role === 'Engineer') {
 			const { name, id, email, github} = answers;
 			const e = new Engineer(name, id, email, github);
-			console.log(e);
 			teamArray.push(e);
 		} else if (answers.role === 'Intern' ){
 			const { name, id, email, school} = answers;

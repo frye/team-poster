@@ -35,7 +35,7 @@ const getDetails = (employee) => {
 			return `Office number: ${employee.office}`;
 			break;
 		case 'Engineer':
-			return `GitHub: <a href="https://github.com/${employee.github}" class="link-info">${employee.github}</a>`;
+			return `GitHub: <a href="https://github.com/${employee.github}" target="_blank" class="link-info">${employee.github}</a>`;
 			break;
 		case 'Intern':
 			return `School: ${employee.school}`;

@@ -8,7 +8,7 @@ describe('Manager', () => {
 	describe('Initialization', () => {
 		it('should create an object with officeNumber if provided with valid arguments', () => {
 			const manager = new Manager(testName, testId, testEmail, testOfficeNumber);
-			let office = manager.officeNumber;
+			let office = manager.office;
 			expect(office).toEqual(testOfficeNumber);
 		});
 	});

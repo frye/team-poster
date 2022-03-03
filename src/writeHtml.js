@@ -29,6 +29,20 @@ const generateHtml = (teamCards) => {
 	return html;
 }
 
+const getDetails = (employee) => {
+	switch (employee.getRole()) {
+		case 'Manager':
+			return `Office number: ${employee.office}`;
+			break;
+		case 'Engineer':
+			return `GitHub: <a href="https://github.com/${employee.github}" class="link-info">${employee.github}</a>`;
+			break;
+		case 'Intern':
+			return `School: ${employee.school}`;
+			break;
+	}
+}
+
 const generateTeamCards = (teamArray) => {
 	const teamHtmlArr = [];
 	teamArray.forEach((employee) => {
@@ -38,9 +52,9 @@ const generateTeamCards = (teamArray) => {
 	  <p class="card-text">${employee.getRole()}</p>
 	</div>
 	<ul class="list-group list-group-flush bg-secondary border-0" id="list">
-	  <li class="list-group-item bg-secondary">ID: ${employee.name}</li>
-	  <li class="list-group-item bg-secondary"><a href="mailto: ${employee.name}" class="link-info">${employee.name}</a></li>
-	  <li class="list-group-item bg-secondary" id="type"></li>
+	  <li class="list-group-item bg-secondary">ID: ${employee.getId()}</li>
+	  <li class="list-group-item bg-secondary"><a href="mailto: ${employee.getEmail()}" class="link-info">${employee.getEmail()}</a></li>
+	  <li class="list-group-item bg-secondary" id="type">${getDetails(employee)}</li>
 	</ul>
  </div>
  `);

@@ -16,12 +16,12 @@ Node app to generate html page that displays key information about team members.
 
 ## Installation
 - Clone the repo
-- Run the app by executing 'node index.js' in the terminal
+- Install the dependencies by executing 'npm i' via terminal
 
 ## How to use
 Launch the app from terminal by executing 'node index.js'
 
-
+You can see a demo video [here](https://youtu.be/Rn7cEUadpLE).
 
 
 ## How to test

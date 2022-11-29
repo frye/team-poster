@@ -123,14 +123,16 @@ const createMembers = () => {
 	})
 };
 
+// Async / await is cleaner than the previous implementation with .then()
+const init = async () => {
+	try {
+	await createTeam();
+	await createMembers();
+	await writeHtml(teamArray);
+	console.log('Team profile created!');
+	} catch (err) {
+		console.log(err);
+	}
+}
 
-// Using promises for inquirer and writeMarkdown (which uses writeFileSync)
-createTeam()
-		.then(createMembers)
-		.then((teamArray) => {
-			writeHtml(teamArray);
-		})
-		.then(() => {
-			console.log(`Successfully completed!`);
-		})
-		.catch((err) => console.error(err));
+init();
